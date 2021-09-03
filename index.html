@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>HTML native elements</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" />
+	<style>
+		#r1:focus-visible {
+			outline: red 2px solid;
+		}
+
+		#r1:focus {
+			outline: blue 2px solid;
+		}
+
+		h3 {
+			padding-left: 10px;
+			font-size: 1.5em !important;
+		}
+
+		input[type='radio'],
+		input[type='checkbox'] {
+			margin: 0 10px 0 5px;
+		}
+	</style>
+</head>
+
+
+<body>
+	<main class="container-fluid">
+		<h1 class="">HTML Native elements:</h1>
+		<h2>Lists:</h2>
+		<div class="row mx-5">
+			<div class="col">
+				<h3>Item List(ul):</h3>
+				<ul>
+					<li>Google</li>
+					<li>Drive</li>
+					<li>Gmail</li>
+				</ul>
+			</div>
+			<div class="col">
+				<h3>Item List(ol):</h3>
+				<ol>
+					<li>Google</li>
+					<li>Drive</li>
+					<li>Gmail</li>
+				</ol>
+			</div>
+			<div class="col">
+				<h3>Link list(ul):</h3>
+				<ul>
+					<li><a href="http://google.com">Google</a></li>
+					<li><a href="http://drive.google.com">Drive</a></li>
+					<li><a href="http://mail.google.com">Gmail </a></li>
+				</ul>
+			</div>
+		</div>
+
+		<hr>
+		<h2>From elements:</h2>
+		<div class="row mt-5 mx-5">
+			<div class="col-12 col-sm-6 col-lg-3">
+				<h3>Select: </h3>
+				<select>
+					<option value="Seattle">Seattle</option>
+					<option value="Chicago">Chicago</option>
+					<option value="New York">New York</option>
+				</select>
+			</div>
+			<div class="col-12 col-sm-6 col-lg-3">
+				<h3>Input text </h3>
+				<input type="text" placeholder="My type is text" />
+			</div>
+			<div class="col-12 col-sm-6 col-lg-3">
+				<h3>Input number </h3>
+				<input type="number" placeholder="My type is number" />
+			</div>
+			<div class="col-12 col-sm-6 col-lg-3">
+				<h3>Input password </h3>
+				<input type="password" placeholder="My type is password" />
+			</div>
+		</div>
+
+		<div class="row mt-5 mx-5 pb-5">
+			<div class="col-12 col-sm-6 col-lg-3 mt-4">
+				<h3>Textarea:</h3>
+				<textarea id="" cols="30" rows="5"></textarea>
+			</div>
+			<div class="col-12 col-sm-6 col-lg-3 mt-4">
+				<h3>Radio buttons</h3>
+				<label><input type="radio" name="apple">Apple</label>
+				<label><input type="radio" name="orange">Orange</label>
+				<label><input type="radio" name="grapes">Grapes</label>
+			</div>
+			<div class="col-12 col-sm-6 col-lg-3 mt-4">
+				<h3>Radio group</h3>
+				<label><input type="radio" name="group">Apple</label>
+				<label><input type="radio" name="group">Orange</label>
+				<label><input type="radio" name="group">Grapes</label>
+			</div>
+
+			<div class="col-12 col-sm-6 col-lg-3 mt-4">
+				<h3>Checkboxes:</h3>
+				<label><input type="checkbox" name="checks">Windows</label>
+				<label><input type="checkbox" name="checks">Mac OS</label>
+				<label><input type="checkbox" name="checks">Linux</label>
+			</div>
+
+			<div class="col-12 col-sm-6 col-lg-3 mt-4">
+				<h3>Button (default)</h3>
+				<button type="button">Ok</button>
+			</div>
+
+			<div class="col-12 col-sm-6 col-lg-3 mt-4">
+				<h3>Reset</h3>
+				<button type="reset">Clear</button>
+
+			</div>
+			<div class="col-12 col-sm-6 col-lg-3 mt-4">
+				<h3>Submit</h3>
+				<button type="submit">Send</button>
+			</div>
+
+		</div>
+
+
+
+
+
+
+
+	</main>
+
+
+</html>
