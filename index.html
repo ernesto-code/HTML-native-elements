@@ -182,23 +182,23 @@
 
 	</main>
 
-<div>
-	<p>
-		<span>Error:</span>
-		<button>See error</button>
-		<span>in full</span>
-	</p>
+<div tabindex="0">
+	My text content in the first container <button>my button</button>
 </div>
-<br>
+
 <div>
-	<p tabindex="-1">
-		<span>Error:</span>
-		<button>See error</button>
-		<span>in full</span>
-	</p>
+	My text content in the second container <button>my button</button>
 </div>
 
 
+<script>
+	
+	document.addEventListener('click',(ev)=>{
+		if(ev.ctrlKey)
+            ev.target.style.outline = 'red thin solid'
+	})
+
+</script>
 </body>
 </html>
 
