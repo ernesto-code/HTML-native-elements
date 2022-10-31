@@ -220,6 +220,23 @@
             ev.target.style.outline = 'red thin solid'
 	})
 
+	document.addEventListener('click',(ev)=>{
+		if(ev.altKey)
+           { 
+			console.log(ev.target)
+			ev.target.parentElement.remove()
+		}
+	})
+
+// dsfsdfsf
+
+const table = document.getElementsByTagName("table")[0]
+
+const tableArr = Array.prototype.slice.call( table.children[0].children )
+let idsArr = []
+
+//tableArr[1].children[0].innerHTML
+
 </script>
 </body>
 </html>
