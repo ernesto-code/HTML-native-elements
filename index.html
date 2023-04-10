@@ -34,42 +34,11 @@
 		<h1 class="">HTML Native elements:</h1>
 		<hr>
 
-		<h2>Prueba </h2>
-		<p>Como esta en EM</p>
-		<input id="react-select-10-input" tabindex="0" inputmode="none" aria-expanded="false" aria-haspopup="true" 
-		aria-label="Select Country/Region" role="combobox" aria-readonly="true" class="css-1hac4vs-dummyInput" value="">
-
-<p>Con popup listbox</p>
-<input id="react-select-10-input" tabindex="0" inputmode="none" aria-expanded="false" aria-haspopup="listbox" 
-		aria-label="Select Country/Region" role="combobox" aria-readonly="true" class="css-1hac4vs-dummyInput" value="">
-<p>Sin aria-readonly</p>
-<input id="react-select-10-input" tabindex="0" inputmode="none" aria-expanded="false" aria-haspopup="true" 
-		aria-label="Select Country/Region" role="combobox" class="css-1hac4vs-dummyInput" value="">
-<p>Sin clases CSS</p>
-<input id="react-select-10-input" tabindex="0" inputmode="none" aria-expanded="false" aria-haspopup="true" 
-		aria-label="Select Country/Region" role="combobox" aria-readonly="true" class="" value="">
-<p>Con solo atributos aria</p>
-<input aria-expanded="false" aria-haspopup="true" aria-label="Select Country/Region" role="combobox" aria-readonly="true" >
-
-
-
-		<p>Como esta en WA</p>
-		<div class="combo js-select">
-            <div aria-controls="listbox1" aria-expanded="false" aria-haspopup="listbox" aria-label="myTest" id="combo1" class="combo-input" role="combobox" tabindex="0" aria-activedescendant="">Choose a Fruit</div>
-            <div class="combo-menu" role="listbox" id="listbox1" aria-labelledby="combo1-label" tabindex="-1">
-              <div role="option" id="combo1-0" class="combo-option option-current" aria-selected="true">Choose a Fruit</div>
-			  <div role="option" id="combo1-1" class="combo-option" aria-selected="false">Apple</div>
-          </div>
-
-
-
-<h2>Links test for VO</h2>
-<h3>Link without href attr</h3>
-<a>Go home</a>
-<h3>Link with null href</h3>
-<a href="">Go home</a>
-<h3>Link with valid href attr</h3>
-<a href="http://google.com">Go home</a>
+<div role="group" aria-label="Beverages">
+	<label>Coffe<input type="checkbox" name="" id=""></label>
+	<label>Milk<input type="checkbox" name="" id=""></label>
+	<label>Juice<input type="checkbox" name="" id=""></label>
+</div>
 
 <div>-----------</div>
 
@@ -305,6 +274,18 @@ let idsArr = []
 	</li> 
 					
 					<li> <div class="documento-condiciones-wrapper"> <div><span class="documento-condiciones descarga pdf" aria-hidden="true"><i id="documento-peso-1">(558Kb)</i></span></div> <div class="info"><span class="descarga" id="pdf-1" role="link" aria-label=" FIRMA DOCUMENTO INFORMATIVO DE LAS COMISIONES - PDF " aria-labelledby="pdf-1 documento-peso-1 fechaSubida-1" data-uri="/documents/V01/?$filter=0064%2F6TtVUdglRyCLSbpj8%2Feua3Es4YUwBlCeANlKMTpUuYt6o6YLkBJx2g97joSABHU0064" tabindex="0" data-added-tabindex-by-js="true"><b>FIRMA DOCUMENTO INFORMATIVO DE LAS COMISIONES</b></span><span id="fechaSubida-1" class="fechaSubida">07/02/2021</span></div> </div> </li> <li class="last"> <div class="documento-condiciones-wrapper"> <div><span class="documento-condiciones descarga pdf" aria-hidden="true"><i id="documento-peso-2">(406Kb)</i></span></div> <div class="info"><span class="descarga" id="pdf-2" role="link" aria-label=" FIRMA DE CONTRATO (Y ANEXOS) - PDF " aria-labelledby="pdf-2 documento-peso-2 fechaSubida-2" data-uri="/documents/V01/?$filter=0064%2F6TtVUdglRyCLSbpj8%2Feua3Es4YUwBlCwN5A1iaEqP8E8oIeK0XQllhwCsIIOVy40064" tabindex="0" data-added-tabindex-by-js="true"><b>FIRMA DE CONTRATO (Y ANEXOS)</b></span><span id="fechaSubida-2" class="fechaSubida">07/02/2021</span></div> </div> </li> </ul>
+
+
+<script src="jquery.accessibleName.corejs.min.js"></script>
+<script src="jquery.accessibleName.min.js"></script>
+
+<script>
+	
+	const a11yName = $('pdf-0').a11yName();
+	console.log(a11yName)
+</script> 
+
+
 
 </body>
 </html>
