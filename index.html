@@ -25,6 +25,14 @@
 		input[type='checkbox'] {
 			margin: 0 10px 0 5px;
 		}
+		.safari:focus-visible{
+			outline:red thin solid;
+			outline-offset: -2px;
+		}
+		.safari:focus{
+			outline:blue thin solid;
+			outline-offset: -2px;
+		}
 	</style>
 </head>
 
@@ -52,8 +60,8 @@
 
 <div>-----------</div>
 
-<span>Current issue</span>
-<a href="#">
+<span>Safari focus indicator</span>
+<a href="#" class="safari">
 	<span >See all the benefits</span>
 	<span aria-label="chevron"> > </span>
 </a>
