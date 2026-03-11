@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>SVG High Contrast Test</title>
+
+<style>
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 40px;
+}
+
+/* Normal logo */
+.logo-normal {
+  width: 200px;
+}
+
+/* Logo where browser is allowed to change colors */
+.logo-auto {
+  width: 200px;
+}
+
+/* Logo that preserves original colors */
+.logo-fixed {
+  width: 200px;
+  forced-color-adjust: none;
+}
+
+/* Styling when forced colors are active */
+@media (forced-colors: active) {
+
+  body {
+    background: Canvas;
+    color: CanvasText;
+  }
+
+  .test-box {
+    border: 2px solid CanvasText;
+  }
+
+}
+
+.test-box {
+  margin-bottom: 40px;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>SVG Accessibility Test – Forced Colors</h1>
+
+<p>Enable Windows High Contrast Mode or simulate forced colors to see how SVG logos react.</p>
+
+<div class="test-box">
+
+<h2>Normal SVG (browser can adjust colors)</h2>
+
+<svg class="logo-auto" viewBox="0 0 200 60" role="img" aria-label="Test Bank">
+  <rect width="200" height="60" fill="#E3000F"></rect>
+  <text x="100" y="38" text-anchor="middle" fill="white" font-size="22" font-weight="bold">
+    BANK
+  </text>
+</svg>
+
+</div>
+
+
+<div class="test-box">
+
+<h2>SVG with forced-color-adjust: none</h2>
+
+<svg class="logo-fixed" viewBox="0 0 200 60" role="img" aria-label="Test Bank">
+  <rect width="200" height="60" fill="#E3000F"></rect>
+  <text x="100" y="38" text-anchor="middle" fill="white" font-size="22" font-weight="bold">
+    BANK
+  </text>
+</svg>
+
+</div>
+
+
+<div class="test-box">
+
+<h2>SVG using system colors (best compatibility)</h2>
+
+<svg class="logo-normal" viewBox="0 0 200 60" role="img" aria-label="Test Bank">
+  <rect width="200" height="60" fill="CanvasText"></rect>
+  <text x="100" y="38" text-anchor="middle" fill="Canvas" font-size="22" font-weight="bold">
+    BANK
+  </text>
+</svg>
+
+</div>
+
+</body>
+</html>
