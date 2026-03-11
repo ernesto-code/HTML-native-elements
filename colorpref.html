@@ -96,90 +96,99 @@ body {
 </div>
 
 <div class="logo-wrap">
-    <svg xmlns="http://www.w3.org/2000/svg"
-         width="216"
-         height="105"
-         viewBox="0 0 216 105"
-         role="img"
-         aria-labelledby="title desc">
-      <title id="title">uTest logo</title>
-      <desc id="desc">Adaptive SVG logo that responds to user preference changes, including forced colors and high contrast settings.</desc>
+    <?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="216"
+     height="105"
+     viewBox="0 0 216 105"
+     role="img"
+     aria-labelledby="title desc">
 
-      <style>
-        :root {
-          --accent: #19B5E6;
-          --text: currentColor;
-          --small: currentColor;
-        }
+  <title id="title">uTest logo</title>
+  <desc id="desc">Adaptive SVG logo that responds to user preference changes.</desc>
 
-        svg {
-          color: #ffffff;
-          background: transparent;
-          forced-color-adjust: auto;
-          font-family: Arial, Helvetica, sans-serif;
-        }
+  <style>
+    :root {
+      --accent: #19B5E6;
+      --text: #9AA0A6; /* grey color */
+      --small: currentColor;
+    }
 
-        .mark {
-          fill: var(--accent);
-        }
+    svg {
+      color: #ffffff;
+      background: transparent;
+      forced-color-adjust: auto;
+      font-family: Arial, Helvetica, sans-serif;
+    }
 
-        .u {
-          fill: #ffffff;
-          font-size: 36px;
-          font-weight: 700;
-        }
+    .mark {
+      fill: var(--accent);
+    }
 
-        .test {
-          fill: var(--text);
-          font-size: 58px;
-          font-weight: 400;
-          letter-spacing: -1px;
-        }
+    .u {
+      fill: #ffffff;
+      font-size: 36px;
+      font-weight: 700;
+    }
 
-        .reg {
-          fill: var(--small);
-          font-size: 12px;
-          font-weight: 400;
-        }
+    .test {
+      fill: var(--text); /* grey text */
+      font-size: 58px;
+      font-weight: 400;
+      letter-spacing: -1px;
+    }
 
-        @media (forced-colors: active) {
-          svg {
-            color: CanvasText;
-          }
+    .reg {
+      fill: var(--small);
+      font-size: 12px;
+    }
 
-          .mark {
-            fill: ButtonText;
-            stroke: CanvasText;
-            stroke-width: 1;
-          }
+    /* When forced colors are active */
+    @media (forced-colors: active) {
 
-          .u {
-            fill: Canvas;
-          }
+      svg {
+        color: CanvasText;
+      }
 
-          .test,
-          .reg {
-            fill: CanvasText;
-          }
-        }
+      .mark {
+        fill: ButtonText;
+        stroke: CanvasText;
+        stroke-width: 1;
+      }
 
-        @media (prefers-contrast: more) {
-          .mark {
-            stroke: currentColor;
-            stroke-width: 1.5;
-          }
+      .u {
+        fill: Canvas;
+      }
 
-          .test {
-            font-weight: 700;
-          }
-        }
-      </style>
+      .test,
+      .reg {
+        fill: CanvasText;
+      }
 
-      <circle class="mark" cx="47" cy="52.5" r="28" />
-      <text class="u" x="47" y="65" text-anchor="middle">u</text>
-      <text class="test" x="82" y="71">Test</text>
-      <text class="reg" x="177" y="34">®</text>
-    </svg>
+    }
+
+    /* Increased contrast preference */
+    @media (prefers-contrast: more) {
+
+      .test {
+        font-weight: 700;
+      }
+
+      .mark {
+        stroke: currentColor;
+        stroke-width: 1.5;
+      }
+
+    }
+
+  </style>
+
+  <circle class="mark" cx="47" cy="52.5" r="28"/>
+  <text class="u" x="47" y="65" text-anchor="middle">u</text>
+  <text class="test" x="82" y="71">Test</text>
+  <text class="reg" x="177" y="34">®</text>
+
+</svg>
   </div>
 
 </body>
