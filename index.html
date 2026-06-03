@@ -325,6 +325,20 @@ let idsArr = []
 <!--script src="jquery.accessibleName.corejs.min.js"></script>
 <script src="jquery.accessibleName.min.js"></script-->
 
+	<h3>Perdida de focus</h3>
+	<button id="deleteButton">
+    	Eliminar este botón
+  	</button>
+
+  <p id="message" tabindex="-1"></p>
+  
+  <script>
+
+
+    
+  </script>
+
+
 <script>
 	
 	//const a11yName = $('pdf-0').a11yName();
@@ -333,10 +347,19 @@ let idsArr = []
 	const moveBtn = document.getElementById('move-btn')
 	const disabledBtn = document.getElementById('disabled-btn')
 
+	const button = document.getElementById("deleteButton");
+    const message = document.getElementById("message");
+
 	moveBtn.addEventListener("click",()=>{
 		console.log('Moving focus')
 		disabledBtn.focus()
 	})
+
+	button.addEventListener("click", function () {
+
+      // Eliminar el botón del DOM
+      button.remove();
+    });
 </script> 
 
 
