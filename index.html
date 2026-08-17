@@ -226,6 +226,31 @@
 		<h2>Disable button (html disable)</h2>
 		<button id="btnOk" disabled>Ok</button>
 
+		<div class="row mt-5 mx-5">
+			<div class="col-12 col-md-8 col-lg-6">
+				<h3>Upload files</h3>
+
+				<label for="fileUpload" class="form-label">Select files</label>
+
+				<div class="input-group">
+					<input
+						type="file"
+						id="fileUpload"
+						class="form-control"
+						multiple
+					>
+
+					<button
+						type="button"
+						id="addFilesButton"
+						class="btn btn-primary"
+					>
+						Agregar
+					</button>
+				</div>
+			</div>
+		</div>
+
 
 <h3>Other</h3>
 <h4>Using a div wrapping options</h4>
@@ -360,6 +385,13 @@ let idsArr = []
       // Eliminar el botón del DOM
       button.remove();
     });
+
+	const fileUpload = document.getElementById("fileUpload");
+	const addFilesButton = document.getElementById("addFilesButton");
+
+	addFilesButton.addEventListener("click", function () {
+    fileUpload.click();
+});
 </script> 
 
 
